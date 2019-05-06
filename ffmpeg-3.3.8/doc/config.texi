@@ -67,14 +67,14 @@
 @c @set have-loongson2 no
 @c @set have-loongson3 no
 @c @set have-mmi no
-@c @set have-armv5te-external no
-@c @set have-armv6-external no
+@set have-armv5te-external yes
+@set have-armv6-external yes
 @c @set have-armv6t2-external no
 @c @set have-armv8-external no
 @c @set have-neon-external no
-@c @set have-vfp-external no
+@set have-vfp-external yes
 @c @set have-vfpv3-external no
-@c @set have-setend-external no
+@set have-setend-external yes
 @c @set have-altivec-external no
 @c @set have-dcbzl-external no
 @c @set have-ldbrx-external no
@@ -111,14 +111,14 @@
 @c @set have-loongson2-external no
 @c @set have-loongson3-external no
 @c @set have-mmi-external no
-@c @set have-armv5te-inline no
-@c @set have-armv6-inline no
+@set have-armv5te-inline yes
+@set have-armv6-inline yes
 @c @set have-armv6t2-inline no
 @c @set have-armv8-inline no
 @c @set have-neon-inline no
-@c @set have-vfp-inline no
+@set have-vfp-inline yes
 @c @set have-vfpv3-inline no
-@c @set have-setend-inline no
+@set have-setend-inline yes
 @c @set have-altivec-inline no
 @c @set have-dcbzl-inline no
 @c @set have-ldbrx-inline no
@@ -157,11 +157,11 @@
 @c @set have-mmi-inline no
 @c @set have-aligned-stack no
 @c @set have-fast-64bit no
-@c @set have-fast-clz no
+@set have-fast-clz yes
 @c @set have-fast-cmov no
-@set have-local-aligned-8 yes
-@set have-local-aligned-16 yes
-@set have-local-aligned-32 yes
+@c @set have-local-aligned-8 no
+@c @set have-local-aligned-16 no
+@c @set have-local-aligned-32 no
 @c @set have-simd-align-16 no
 @c @set have-simd-align-32 no
 @set have-atomics-gcc yes
@@ -170,7 +170,7 @@
 @c @set have-atomic-cas-ptr no
 @c @set have-machine-rw-barrier no
 @c @set have-memorybarrier no
-@set have-mm-empty yes
+@c @set have-mm-empty no
 @c @set have-rdtsc no
 @set have-sarestart yes
 @set have-sem-timedwait yes
@@ -179,9 +179,9 @@
 @c @set have-cexp no
 @set have-inline-asm yes
 @c @set have-symver no
-@c @set have-yasm no
+@set have-yasm yes
 @c @set have-bigendian no
-@c @set have-fast-unaligned no
+@set have-fast-unaligned yes
 @c @set have-alsa-asoundlib-h no
 @c @set have-altivec-h no
 @set have-arpa-inet-h yes
@@ -318,19 +318,19 @@
 @set have-pthreads yes
 @c @set have-os2threads no
 @c @set have-w32threads no
-@c @set have-as-dn-directive no
-@c @set have-as-fpu-directive no
+@set have-as-dn-directive yes
+@set have-as-fpu-directive yes
 @c @set have-as-func no
-@c @set have-as-object-arch no
-@c @set have-asm-mod-q no
+@set have-as-object-arch yes
+@set have-asm-mod-q yes
 @set have-attribute-may-alias yes
 @set have-attribute-packed yes
-@set have-ebp-available yes
+@c @set have-ebp-available no
 @c @set have-ebx-available no
 @c @set have-gnu-as no
 @c @set have-gnu-windres no
 @c @set have-ibm-asm no
-@set have-inline-asm-direct-symbol-refs yes
+@c @set have-inline-asm-direct-symbol-refs no
 @set have-inline-asm-labels yes
 @set have-inline-asm-nonlocal-labels yes
 @set have-pragma-deprecated yes
@@ -339,7 +339,7 @@
 @set have-symver-gnu-asm yes
 @c @set have-vfp-args no
 @c @set have-xform-asm no
-@set have-xmm-clobbers yes
+@c @set have-xmm-clobbers no
 @c @set have-condition-variable-ptr no
 @set have-socklen-t yes
 @set have-struct-addrinfo yes
@@ -381,7 +381,7 @@
 @set config-encoders yes
 @c @set config-hwaccels no
 @set config-parsers yes
-@c @set config-indevs no
+@set config-indevs yes
 @c @set config-outdevs no
 @set config-filters yes
 @set config-demuxers yes
@@ -518,20 +518,20 @@
 @c @set config-omx-rpi no
 @c @set config-runtime-cpudetect no
 @set config-safe-bitstream-reader yes
-@set config-shared yes
+@c @set config-shared no
 @set config-small yes
-@c @set config-static no
+@set config-static yes
 @set config-swscale-alpha yes
 @set config-gpl yes
-@c @set config-nonfree no
-@c @set config-version3 no
+@set config-nonfree yes
+@set config-version3 yes
 @set config-avcodec yes
-@c @set config-avdevice no
+@set config-avdevice yes
 @set config-avfilter yes
 @set config-avformat yes
-@c @set config-avresample no
+@set config-avresample yes
 @set config-avutil yes
-@c @set config-postproc no
+@set config-postproc yes
 @set config-swresample yes
 @set config-swscale yes
 @c @set config-ffplay no
@@ -542,7 +542,7 @@
 @set config-dwt yes
 @set config-error-resilience yes
 @set config-faan yes
-@c @set config-fast-unaligned no
+@set config-fast-unaligned yes
 @set config-fft yes
 @set config-lsp yes
 @set config-lzo yes
@@ -560,7 +560,7 @@
 @c @set config-xmm-clobber-test no
 @set config-aandcttables yes
 @set config-ac3dsp yes
-@set config-audio-frame-queue yes
+@c @set config-audio-frame-queue no
 @set config-audiodsp yes
 @set config-blockdsp yes
 @set config-bswapdsp yes
@@ -576,7 +576,7 @@
 @set config-frame-thread-encoder yes
 @set config-g722dsp yes
 @set config-golomb yes
-@c @set config-gplv3 no
+@set config-gplv3 yes
 @set config-h263dsp yes
 @set config-h264chroma yes
 @set config-h264dsp yes
@@ -586,9 +586,9 @@
 @set config-hpeldsp yes
 @set config-huffman yes
 @set config-huffyuvdsp yes
-@set config-huffyuvencdsp yes
+@c @set config-huffyuvencdsp no
 @set config-idctdsp yes
-@set config-iirfilter yes
+@c @set config-iirfilter no
 @set config-mdct15 yes
 @set config-intrax8 yes
 @set config-iso-media yes
@@ -599,7 +599,7 @@
 @set config-llauddsp yes
 @set config-llviddsp yes
 @set config-llvidencdsp yes
-@set config-lpc yes
+@c @set config-lpc no
 @set config-lzf yes
 @set config-me-cmp yes
 @set config-mpeg-er yes
@@ -1408,153 +1408,153 @@
 @c @set config-libmodplug-demuxer no
 @c @set config-libnut-demuxer no
 @c @set config-libopenmpt-demuxer no
-@set config-a64multi-encoder yes
-@set config-a64multi5-encoder yes
-@set config-alias-pix-encoder yes
-@set config-amv-encoder yes
-@set config-apng-encoder yes
-@set config-asv1-encoder yes
-@set config-asv2-encoder yes
-@set config-avrp-encoder yes
-@set config-avui-encoder yes
-@set config-ayuv-encoder yes
-@set config-bmp-encoder yes
-@set config-cinepak-encoder yes
-@set config-cljr-encoder yes
-@set config-comfortnoise-encoder yes
-@set config-dnxhd-encoder yes
-@set config-dpx-encoder yes
-@set config-dvvideo-encoder yes
-@set config-ffv1-encoder yes
-@set config-ffvhuff-encoder yes
-@set config-flashsv-encoder yes
-@set config-flashsv2-encoder yes
-@set config-flv-encoder yes
-@set config-gif-encoder yes
-@set config-h261-encoder yes
+@c @set config-a64multi-encoder no
+@c @set config-a64multi5-encoder no
+@c @set config-alias-pix-encoder no
+@c @set config-amv-encoder no
+@c @set config-apng-encoder no
+@c @set config-asv1-encoder no
+@c @set config-asv2-encoder no
+@c @set config-avrp-encoder no
+@c @set config-avui-encoder no
+@c @set config-ayuv-encoder no
+@c @set config-bmp-encoder no
+@c @set config-cinepak-encoder no
+@c @set config-cljr-encoder no
+@c @set config-comfortnoise-encoder no
+@c @set config-dnxhd-encoder no
+@c @set config-dpx-encoder no
+@c @set config-dvvideo-encoder no
+@c @set config-ffv1-encoder no
+@c @set config-ffvhuff-encoder no
+@c @set config-flashsv-encoder no
+@c @set config-flashsv2-encoder no
+@c @set config-flv-encoder no
+@c @set config-gif-encoder no
+@c @set config-h261-encoder no
 @set config-h263-encoder yes
-@set config-h263p-encoder yes
+@c @set config-h263p-encoder no
 @c @set config-hap-encoder no
-@set config-huffyuv-encoder yes
-@set config-jpeg2000-encoder yes
-@set config-jpegls-encoder yes
-@set config-ljpeg-encoder yes
+@c @set config-huffyuv-encoder no
+@c @set config-jpeg2000-encoder no
+@c @set config-jpegls-encoder no
+@c @set config-ljpeg-encoder no
 @set config-mjpeg-encoder yes
-@set config-mpeg1video-encoder yes
-@set config-mpeg2video-encoder yes
+@c @set config-mpeg1video-encoder no
+@c @set config-mpeg2video-encoder no
 @set config-mpeg4-encoder yes
-@set config-msmpeg4v2-encoder yes
-@set config-msmpeg4v3-encoder yes
-@set config-msvideo1-encoder yes
-@set config-pam-encoder yes
-@set config-pbm-encoder yes
-@set config-pcx-encoder yes
-@set config-pgm-encoder yes
-@set config-pgmyuv-encoder yes
+@c @set config-msmpeg4v2-encoder no
+@c @set config-msmpeg4v3-encoder no
+@c @set config-msvideo1-encoder no
+@c @set config-pam-encoder no
+@c @set config-pbm-encoder no
+@c @set config-pcx-encoder no
+@c @set config-pgm-encoder no
+@c @set config-pgmyuv-encoder no
 @set config-png-encoder yes
-@set config-ppm-encoder yes
-@set config-prores-encoder yes
-@set config-prores-aw-encoder yes
-@set config-prores-ks-encoder yes
-@set config-qtrle-encoder yes
-@set config-r10k-encoder yes
-@set config-r210-encoder yes
-@set config-rawvideo-encoder yes
-@set config-roq-encoder yes
-@set config-rv10-encoder yes
-@set config-rv20-encoder yes
-@set config-s302m-encoder yes
-@set config-sgi-encoder yes
-@set config-snow-encoder yes
-@set config-sunrast-encoder yes
-@set config-svq1-encoder yes
-@set config-targa-encoder yes
-@set config-tiff-encoder yes
-@set config-utvideo-encoder yes
-@set config-v210-encoder yes
-@set config-v308-encoder yes
-@set config-v408-encoder yes
-@set config-v410-encoder yes
-@set config-vc2-encoder yes
-@set config-wrapped-avframe-encoder yes
-@set config-wmv1-encoder yes
-@set config-wmv2-encoder yes
-@set config-xbm-encoder yes
-@set config-xface-encoder yes
-@set config-xwd-encoder yes
-@set config-y41p-encoder yes
-@set config-yuv4-encoder yes
-@set config-zlib-encoder yes
-@set config-zmbv-encoder yes
-@set config-aac-encoder yes
-@set config-ac3-encoder yes
-@set config-ac3-fixed-encoder yes
-@set config-alac-encoder yes
-@set config-dca-encoder yes
-@set config-eac3-encoder yes
-@set config-flac-encoder yes
-@set config-g723-1-encoder yes
-@set config-mlp-encoder yes
-@set config-mp2-encoder yes
-@set config-mp2fixed-encoder yes
-@set config-nellymoser-encoder yes
-@set config-opus-encoder yes
-@set config-ra-144-encoder yes
-@set config-sonic-encoder yes
-@set config-sonic-ls-encoder yes
-@set config-truehd-encoder yes
-@set config-tta-encoder yes
-@set config-vorbis-encoder yes
-@set config-wavpack-encoder yes
-@set config-wmav1-encoder yes
-@set config-wmav2-encoder yes
-@set config-pcm-alaw-encoder yes
-@set config-pcm-f32be-encoder yes
-@set config-pcm-f32le-encoder yes
-@set config-pcm-f64be-encoder yes
-@set config-pcm-f64le-encoder yes
-@set config-pcm-mulaw-encoder yes
-@set config-pcm-s8-encoder yes
-@set config-pcm-s8-planar-encoder yes
-@set config-pcm-s16be-encoder yes
-@set config-pcm-s16be-planar-encoder yes
-@set config-pcm-s16le-encoder yes
-@set config-pcm-s16le-planar-encoder yes
-@set config-pcm-s24be-encoder yes
-@set config-pcm-s24daud-encoder yes
-@set config-pcm-s24le-encoder yes
-@set config-pcm-s24le-planar-encoder yes
-@set config-pcm-s32be-encoder yes
-@set config-pcm-s32le-encoder yes
-@set config-pcm-s32le-planar-encoder yes
-@set config-pcm-s64be-encoder yes
-@set config-pcm-s64le-encoder yes
-@set config-pcm-u8-encoder yes
-@set config-pcm-u16be-encoder yes
-@set config-pcm-u16le-encoder yes
-@set config-pcm-u24be-encoder yes
-@set config-pcm-u24le-encoder yes
-@set config-pcm-u32be-encoder yes
-@set config-pcm-u32le-encoder yes
-@set config-roq-dpcm-encoder yes
-@set config-adpcm-adx-encoder yes
-@set config-adpcm-g722-encoder yes
-@set config-adpcm-g726-encoder yes
-@set config-adpcm-ima-qt-encoder yes
-@set config-adpcm-ima-wav-encoder yes
-@set config-adpcm-ms-encoder yes
-@set config-adpcm-swf-encoder yes
-@set config-adpcm-yamaha-encoder yes
-@set config-ssa-encoder yes
-@set config-ass-encoder yes
-@set config-dvbsub-encoder yes
-@set config-dvdsub-encoder yes
-@set config-movtext-encoder yes
-@set config-srt-encoder yes
-@set config-subrip-encoder yes
-@set config-text-encoder yes
-@set config-webvtt-encoder yes
-@set config-xsub-encoder yes
+@c @set config-ppm-encoder no
+@c @set config-prores-encoder no
+@c @set config-prores-aw-encoder no
+@c @set config-prores-ks-encoder no
+@c @set config-qtrle-encoder no
+@c @set config-r10k-encoder no
+@c @set config-r210-encoder no
+@c @set config-rawvideo-encoder no
+@c @set config-roq-encoder no
+@c @set config-rv10-encoder no
+@c @set config-rv20-encoder no
+@c @set config-s302m-encoder no
+@c @set config-sgi-encoder no
+@c @set config-snow-encoder no
+@c @set config-sunrast-encoder no
+@c @set config-svq1-encoder no
+@c @set config-targa-encoder no
+@c @set config-tiff-encoder no
+@c @set config-utvideo-encoder no
+@c @set config-v210-encoder no
+@c @set config-v308-encoder no
+@c @set config-v408-encoder no
+@c @set config-v410-encoder no
+@c @set config-vc2-encoder no
+@c @set config-wrapped-avframe-encoder no
+@c @set config-wmv1-encoder no
+@c @set config-wmv2-encoder no
+@c @set config-xbm-encoder no
+@c @set config-xface-encoder no
+@c @set config-xwd-encoder no
+@c @set config-y41p-encoder no
+@c @set config-yuv4-encoder no
+@c @set config-zlib-encoder no
+@c @set config-zmbv-encoder no
+@c @set config-aac-encoder no
+@c @set config-ac3-encoder no
+@c @set config-ac3-fixed-encoder no
+@c @set config-alac-encoder no
+@c @set config-dca-encoder no
+@c @set config-eac3-encoder no
+@c @set config-flac-encoder no
+@c @set config-g723-1-encoder no
+@c @set config-mlp-encoder no
+@c @set config-mp2-encoder no
+@c @set config-mp2fixed-encoder no
+@c @set config-nellymoser-encoder no
+@c @set config-opus-encoder no
+@c @set config-ra-144-encoder no
+@c @set config-sonic-encoder no
+@c @set config-sonic-ls-encoder no
+@c @set config-truehd-encoder no
+@c @set config-tta-encoder no
+@c @set config-vorbis-encoder no
+@c @set config-wavpack-encoder no
+@c @set config-wmav1-encoder no
+@c @set config-wmav2-encoder no
+@c @set config-pcm-alaw-encoder no
+@c @set config-pcm-f32be-encoder no
+@c @set config-pcm-f32le-encoder no
+@c @set config-pcm-f64be-encoder no
+@c @set config-pcm-f64le-encoder no
+@c @set config-pcm-mulaw-encoder no
+@c @set config-pcm-s8-encoder no
+@c @set config-pcm-s8-planar-encoder no
+@c @set config-pcm-s16be-encoder no
+@c @set config-pcm-s16be-planar-encoder no
+@c @set config-pcm-s16le-encoder no
+@c @set config-pcm-s16le-planar-encoder no
+@c @set config-pcm-s24be-encoder no
+@c @set config-pcm-s24daud-encoder no
+@c @set config-pcm-s24le-encoder no
+@c @set config-pcm-s24le-planar-encoder no
+@c @set config-pcm-s32be-encoder no
+@c @set config-pcm-s32le-encoder no
+@c @set config-pcm-s32le-planar-encoder no
+@c @set config-pcm-s64be-encoder no
+@c @set config-pcm-s64le-encoder no
+@c @set config-pcm-u8-encoder no
+@c @set config-pcm-u16be-encoder no
+@c @set config-pcm-u16le-encoder no
+@c @set config-pcm-u24be-encoder no
+@c @set config-pcm-u24le-encoder no
+@c @set config-pcm-u32be-encoder no
+@c @set config-pcm-u32le-encoder no
+@c @set config-roq-dpcm-encoder no
+@c @set config-adpcm-adx-encoder no
+@c @set config-adpcm-g722-encoder no
+@c @set config-adpcm-g726-encoder no
+@c @set config-adpcm-ima-qt-encoder no
+@c @set config-adpcm-ima-wav-encoder no
+@c @set config-adpcm-ms-encoder no
+@c @set config-adpcm-swf-encoder no
+@c @set config-adpcm-yamaha-encoder no
+@c @set config-ssa-encoder no
+@c @set config-ass-encoder no
+@c @set config-dvbsub-encoder no
+@c @set config-dvdsub-encoder no
+@c @set config-movtext-encoder no
+@c @set config-srt-encoder no
+@c @set config-subrip-encoder no
+@c @set config-text-encoder no
+@c @set config-webvtt-encoder no
+@c @set config-xsub-encoder no
 @c @set config-aac-at-encoder no
 @c @set config-alac-at-encoder no
 @c @set config-ilbc-at-encoder no
@@ -1672,7 +1672,7 @@
 @set config-lowpass-filter yes
 @set config-pan-filter yes
 @set config-replaygain-filter yes
-@c @set config-resample-filter no
+@set config-resample-filter yes
 @c @set config-rubberband-filter no
 @set config-sidechaincompress-filter yes
 @set config-sidechaingate-filter yes
@@ -1812,7 +1812,7 @@
 @set config-perspective-filter yes
 @set config-phase-filter yes
 @set config-pixdesctest-filter yes
-@c @set config-pp-filter no
+@set config-pp-filter yes
 @set config-pp7-filter yes
 @set config-premultiply-filter yes
 @set config-prewitt-filter yes
@@ -1986,17 +1986,17 @@
 @c @set config-decklink-indev no
 @c @set config-dshow-indev no
 @c @set config-dv1394-indev no
-@c @set config-fbdev-indev no
+@set config-fbdev-indev yes
 @c @set config-gdigrab-indev no
 @c @set config-iec61883-indev no
 @c @set config-jack-indev no
-@c @set config-lavfi-indev no
+@set config-lavfi-indev yes
 @c @set config-openal-indev no
 @c @set config-oss-indev no
 @c @set config-pulse-indev no
 @c @set config-qtkit-indev no
 @c @set config-sndio-indev no
-@c @set config-v4l2-indev no
+@set config-v4l2-indev yes
 @c @set config-vfwcap-indev no
 @c @set config-xcbgrab-indev no
 @c @set config-libcdio-indev no
