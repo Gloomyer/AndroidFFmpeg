@@ -11,6 +11,8 @@ cd ffmpeg-3.3.8
 PLATFORM=$ANDROID_NDK_ROOT/platforms/$AOSP_API/$AOSP_ARCH
 TOOLCHAIN=$ANDROID_NDK_ROOT/toolchains/$TOOLCHAIN_BASE-$AOSP_TOOLCHAIN_SUFFIX/prebuilt/linux-x86_64
 
+echo "TOOLCHAIN="$TOOLCHAIN
+
 PREFIX=$LIBS_DIR/$AOSP_ABI
 
 ##可根据自己需要配置
@@ -91,6 +93,6 @@ $TOOLCHAIN/bin/$TOOLNAME_BASE-ld -rpath-link=$PLATFORM/usr/lib -L$PLATFORM/usr/l
     libswscale/libswscale.a \
     libpostproc/libpostproc.a \
     libavdevice/libavdevice.a \
-    -lc -lm -lz -ldl -llog --dynamic-linker=/system/bin/linker $TOOLCHAIN/lib/gcc/$TOOLNAME_BASE/4.9/libgcc.a
+    -lc -lm -lz -ldl -llog --dynamic-linker=/system/bin/linker $TOOLCHAIN/lib/gcc/$TOOLNAME_BASE/4.9.x/libgcc.a
 
 cd ..
