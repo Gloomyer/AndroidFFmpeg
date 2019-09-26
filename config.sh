@@ -1,4 +1,4 @@
-export ANDROID_NDK_ROOT=/root/android-ndk-r14b
+export ANDROID_NDK_ROOT=/root/ndk_r14b
 
 export AOSP_TOOLCHAIN_SUFFIX=4.9
 
